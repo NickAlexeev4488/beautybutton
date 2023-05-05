@@ -4,12 +4,12 @@ import { onMounted, ref, onUpdated } from 'vue'
 let seasonname = ref('summer')
 let names = ref('')
 let col = ''
+let pos = ''
 
 
 onMounted(() => {
   let seasoncol = document.getElementById('seasoncol')
   let begun = document.getElementById('begun')
-  let pos = ''
 })
 
 
@@ -79,29 +79,37 @@ let movebegunok = (n) => {
 
 <style>
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .cont{
+  background-color: rgb(237, 237, 237);
   width: 100%;
-  height: 600px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .template{
-  width: 275px;
+  width: 280px;
   height: 50px;
   display: flex;
-  justify-content: space-between;
   position: relative;
 }
 .tempcont{
   width: 305px;
   height: 64px;
-  background-color: rgb(237, 237, 237);
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
+}
+.tempcont:hover{
+  cursor: pointer;
 }
 
 
@@ -115,11 +123,11 @@ let movebegunok = (n) => {
   opacity: 50%;
 }
 .firstpos{
-  margin-left: 0;
+  margin-left: 10px;
   transition: 400ms;
 }
 .secondpos{
-  margin-left: 75px;
+  margin-left: 80px;
   transition: 400ms;
 }
 .thirdpos{
@@ -127,7 +135,7 @@ let movebegunok = (n) => {
   transition: 400ms;
 }
 .fourthpos{
-  margin-left: 225px;
+  margin-left: 220px;
   transition: 400ms;
 }
 
@@ -162,20 +170,20 @@ let movebegunok = (n) => {
 
 .butseasons{
   background-color: rgb(159, 159, 159);
-  width: 50px;
+  width: 70px;
   height: 50px;
 }
 .summer{
-  background: center / contain url(src/assets/summer.png);
+  background: no-repeat center / contain url(src/assets/summer.png);
 }
 .autumn{
-  background: center / contain url(src/assets/autumn.png);
+  background: no-repeat center / contain url(src/assets/autumn.png);
 }
 .winter{
-  background: center / contain url(src/assets/winter.png);
+  background: no-repeat center / contain url(src/assets/winter.png);
 }
 .spring{
-  background: center / contain url(src/assets/spring.png);
+  background: no-repeat center / contain url(src/assets/spring.png);
 }
 
 </style>
